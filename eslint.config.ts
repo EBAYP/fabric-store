@@ -22,5 +22,21 @@ export default defineConfigWithVueTs(
 
   ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
 
+  {
+    name: 'app/rules',
+    rules: {
+      'vue/no-v-html': 'error',
+      'vue/require-default-prop': 'off',
+      'vue/component-name-in-template-casing': [
+        'error',
+        'PascalCase',
+        {
+          registeredComponentsOnly: false,
+        },
+      ],
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+    },
+  },
+
   skipFormatting,
 )

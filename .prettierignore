@@ -1,0 +1,7 @@
+dist
+coverage
+node_modules
+pnpm-lock.yaml
+src/**/*.ts
+src/**/*.vue
+src/**/*.scss

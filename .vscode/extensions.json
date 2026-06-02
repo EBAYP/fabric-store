@@ -1,8 +1,8 @@
 {
   "recommendations": [
-    "Vue.volar",
+    "vue.volar",
     "dbaeumer.vscode-eslint",
-    "EditorConfig.EditorConfig",
-    "oxc.oxc-vscode"
+    "stylelint.vscode-stylelint",
+    "editorconfig.editorconfig"
   ]
 }
