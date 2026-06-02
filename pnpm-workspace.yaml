@@ -1,0 +1,5 @@
+overrides:
+  electron-to-chromium: 1.5.364
+  node-releases: 2.0.46
+  stylelint-scss: 7.1.1
+  vue-eslint-parser: 10.4.0
