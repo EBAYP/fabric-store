@@ -3,6 +3,11 @@
     "vue.volar",
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "antfu.goto-alias",
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker",
+    "redhat.vscode-yaml"
   ]
 }
