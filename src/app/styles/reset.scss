@@ -1,3 +1,5 @@
+@use './functions' as *;
+
 *,
 *::before,
 *::after {
@@ -5,7 +7,7 @@
 }
 
 html {
-  min-width: 320px;
+  min-width: rem(320);
   min-height: 100%;
   text-size-adjust: 100%;
 }

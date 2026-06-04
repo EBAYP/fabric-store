@@ -7,19 +7,22 @@
 </template>
 
 <style scoped lang="scss">
+@use '@/app/styles/functions' as *;
+@use '@/app/styles/variables' as *;
+
 .app-footer {
-  background: var(--color-white);
-  border-top: 1px solid var(--color-border);
+  background: $color-white;
+  border-top: 1px solid $color-border-dark;
 
   &__container {
     display: flex;
     align-items: center;
-    min-height: 72px;
+    min-height: rem(72);
   }
 
   &__copyright {
-    font-size: 14px;
-    color: var(--color-muted);
+    font-size: rem($font-size-base);
+    color: $color-text-muted;
   }
 }
 </style>

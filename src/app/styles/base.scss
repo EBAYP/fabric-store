@@ -1,8 +1,11 @@
+@use './functions' as *;
+@use './variables' as *;
+
 body {
-  min-width: 320px;
-  font-family: var(--font-main);
-  color: var(--color-text);
-  background: var(--color-bg);
+  min-width: rem(320);
+  font-family: $font-family-main;
+  color: $color-text-primary;
+  background: $color-white;
 }
 
 #app {
@@ -10,7 +13,7 @@ body {
 }
 
 .container {
-  width: min(100% - var(--container-padding) * 2, var(--container-width));
+  width: min(100% - rem($container-padding) * 2, rem($container-width));
   margin-inline: auto;
 }
 

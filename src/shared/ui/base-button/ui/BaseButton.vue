@@ -16,29 +16,32 @@ withDefaults(
 </template>
 
 <style scoped lang="scss">
+@use '@/app/styles/functions' as *;
+@use '@/app/styles/variables' as *;
+
 .base-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 10px 20px;
-  font-weight: 500;
+  min-height: rem(44);
+  padding: rem(10) rem(20);
+  font-weight: $font-weight-medium;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: rem($radius-small);
   transition:
-    color var(--transition-base),
-    background-color var(--transition-base),
-    border-color var(--transition-base);
+    color $transition-base,
+    background-color $transition-base,
+    border-color $transition-base;
 
   &--primary {
-    color: var(--color-white);
-    background: var(--color-accent);
+    color: $color-white;
+    background: $color-gold;
   }
 
   &--secondary {
-    color: var(--color-text);
-    background: var(--color-white);
-    border-color: var(--color-border);
+    color: $color-text-primary;
+    background: $color-white;
+    border-color: $color-border-dark;
   }
 }
 </style>

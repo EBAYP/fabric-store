@@ -14,39 +14,42 @@
 </template>
 
 <style scoped lang="scss">
+@use '@/app/styles/functions' as *;
+@use '@/app/styles/variables' as *;
+
 .app-header {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
+  background: $color-white;
+  border-bottom: 1px solid $color-border-dark;
 
   &__container {
     display: flex;
-    gap: 32px;
+    gap: rem(32);
     align-items: center;
     justify-content: space-between;
-    min-height: 72px;
+    min-height: rem(72);
   }
 
   &__logo {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--color-black);
+    font-size: rem(20);
+    font-weight: $font-weight-semibold;
+    color: $color-black;
   }
 
   &__nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: rem(20);
     align-items: center;
   }
 
   &__link {
-    font-size: 15px;
-    color: var(--color-muted);
-    transition: color var(--transition-base);
+    font-size: rem(15);
+    color: $color-text-muted;
+    transition: color $transition-base;
 
     &:hover,
     &.router-link-active {
-      color: var(--color-text);
+      color: $color-text-primary;
     }
   }
 }

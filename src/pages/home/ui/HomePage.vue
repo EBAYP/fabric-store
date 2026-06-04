@@ -7,7 +7,10 @@
 </template>
 
 <style scoped lang="scss">
+@use '@/app/styles/functions' as *;
+@use '@/app/styles/variables' as *;
+
 .home-page {
-  padding-block: 80px;
+  padding-block: rem($spacing-section);
 }
 </style>

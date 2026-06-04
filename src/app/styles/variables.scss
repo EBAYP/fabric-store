@@ -1,19 +1,107 @@
+/* stylelint-disable scss/dollar-variable-empty-line-before */
+
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
-:root {
-  --font-main: 'Inter', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', sans-serif;
+$font-family-main: 'Montserrat', sans-serif;
 
-  --color-white: #ffffff;
-  --color-black: #111111;
-  --color-text: #1f1f1f;
-  --color-muted: #777777;
-  --color-border: #e5e5e5;
-  --color-bg: #f7f7f7;
-  --color-accent: #2f5f4f;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 
-  --container-width: 1280px;
-  --container-padding: 20px;
+$font-size-small: 12px;
+$font-size-base: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-price: 22px;
+$font-size-title: 26px;
+$font-size-hero: 32px;
 
-  --transition-base: 0.2s ease;
-}
+$line-height-base: 1.5;
+$line-height-tight: 1.33;
+
+$letter-spacing-base: 0.02em;
+$letter-spacing-button: 0.025em;
+$letter-spacing-menu: 0.07em;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dark: #19242f;
+$color-gold: #dbc08d;
+$color-gold-dark: #bfa470;
+$color-blue: #263669;
+$color-light-gray: #f8f8f8;
+$color-gray: #dadada;
+
+$color-text-primary: $color-dark;
+$color-text-light: $color-white;
+$color-text-muted: rgba($color-dark, 0.5);
+$color-text-light-muted: rgba($color-white, 0.5);
+
+$color-border-dark: $color-dark;
+$color-border-light: $color-white;
+$color-border-gold: $color-gold-dark;
+
+$fabric-dark-gray: #848381;
+$fabric-gray: #dadada;
+$fabric-white: #ffffff;
+$fabric-black: #000004;
+$fabric-dark-blue: #263669;
+$fabric-blue: #4a7ab8;
+$fabric-light-blue: #94b7d5;
+$fabric-orange: #fc8b23;
+$fabric-green: #007c7a;
+$fabric-yellow: #f5dc41;
+$fabric-purple: #b5a0c9;
+$fabric-red: #b2092c;
+
+$page-width: 1400px;
+$container-width: 1160px;
+$container-padding: 20px;
+$section-padding-x: 120px;
+
+$header-top-height: 110px;
+$header-menu-height: 60px;
+$header-promo-height: 50px;
+
+$radius-small: 4px;
+$radius-card: 16px;
+$radius-pill: 100px;
+
+$spacing-xs: 4px;
+$spacing-sm: 10px;
+$spacing-md: 16px;
+$spacing-lg: 30px;
+$spacing-xl: 40px;
+$spacing-section: 80px;
+
+$button-height: 58px;
+$button-height-large: 60px;
+$button-radius: $radius-pill;
+
+$input-height: 59px;
+$input-radius: $radius-pill;
+
+$card-radius: $radius-card;
+
+$news-card-width: 360px;
+$news-card-height: 400px;
+$news-card-image-height: 240px;
+
+$product-card-width: 260px;
+$product-card-height: 431px;
+$product-card-image-height: 260px;
+
+$color-card-size: 130px;
+
+$hero-width: 1160px;
+$hero-height: 460px;
+
+$carousel-arrow-size: 50px;
+$icon-size: 24px;
+$icon-size-small: 16px;
+$icon-size-social: 32px;
+
+$transition-base: 0.2s ease;
