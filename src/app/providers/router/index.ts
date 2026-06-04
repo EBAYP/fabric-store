@@ -6,27 +6,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/pages/HomePage.vue'),
+      component: () => import('@/pages/home').then(({ HomePage }) => HomePage),
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('@/pages/AboutPage.vue'),
+      component: () => import('@/pages/about').then(({ AboutPage }) => AboutPage),
     },
     {
       path: '/catalog',
       name: 'catalog',
-      component: () => import('@/pages/CatalogPage.vue'),
+      component: () => import('@/pages/catalog').then(({ CatalogPage }) => CatalogPage),
     },
     {
       path: '/catalog/:slug',
       name: 'product',
-      component: () => import('@/pages/ProductPage.vue'),
+      component: () => import('@/pages/product').then(({ ProductPage }) => ProductPage),
     },
     {
       path: '/news',
       name: 'news',
-      component: () => import('@/pages/NewsPage.vue'),
+      component: () => import('@/pages/news').then(({ NewsPage }) => NewsPage),
     },
   ],
   scrollBehavior() {
