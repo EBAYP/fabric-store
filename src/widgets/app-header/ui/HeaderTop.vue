@@ -103,7 +103,7 @@ import { CartButton } from '@/shared/ui/cart-button'
     display: flex;
     gap: rem(8);
     align-items: center;
-    font-size: rem($font-size-base);
+    font-size: rem($font-size-small);
     font-weight: $font-weight-semibold;
     line-height: $line-height-tight;
     color: $color-white;
