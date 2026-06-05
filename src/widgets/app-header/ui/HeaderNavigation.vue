@@ -25,7 +25,7 @@ import catalogChevronIcon from '@/shared/assets/icons/catalog-chevron.svg'
 
 .header-navigation {
   color: $color-white;
-  background: rgba($color-dark, 0.95);
+  background: rgba($color-white, 0.05);
 
   &__container {
     display: flex;
