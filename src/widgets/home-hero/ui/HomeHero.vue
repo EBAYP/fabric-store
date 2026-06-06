@@ -12,23 +12,23 @@ import { BaseButton } from '@/shared/ui/base-button'
 
 const slides = [
   {
-    title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
+    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
     image: CompanyWomanWithFabricStackImage,
   },
   {
-    title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
+    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
     image: CompanyWomanWithFabricStackImage,
   },
   {
-    title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
+    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
     image: CompanyWomanWithFabricStackImage,
   },
   {
-    title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
+    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
     image: CompanyWomanWithFabricStackImage,
   },
   {
-    title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
+    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
     image: CompanyWomanWithFabricStackImage,
   },
 ]
@@ -52,13 +52,14 @@ const goToSlide = (index: number) => {
 </script>
 
 <template>
-  <section class="home-hero" aria-label="Акции и специальные предложения">
+  <section class="home-hero">
     <div class="home-hero__container container">
       <Swiper class="home-hero__slider" :slides-per-view="1" :speed="500" @swiper="handleSwiper" @slide-change="handleSlideChange">
         <SwiperSlide v-for="(slide, index) in slides" :key="index">
           <article class="home-hero__slide">
             <div class="home-hero__content">
-              <h1 class="home-hero__title">{{ slide.title }}</h1>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <h1 class="home-hero__title" v-html="slide.title"/>  <!-- убрать потенциальную инъекцию (хотя тут константный список, и нахер это все надо) -->
 
               <BaseButton class="home-hero__button" variant="gold" shape="pill">
                 <span>Подробнее</span>
@@ -153,6 +154,10 @@ $hero-image-right: 60px;
     color: $color-white;
     letter-spacing: $letter-spacing-base;
     white-space: pre-line;
+
+    :deep(.home-hero__title--accent) {
+      color: $color-gold;
+    }
   }
 
   &__button {
