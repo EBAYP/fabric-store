@@ -112,6 +112,7 @@ $hero-image-right: 60px;
 .home-hero {
   padding-top: rem(40);
   padding-bottom: rem(80);
+  overflow-x: clip;
   background: $color-white;
 
   &__container {
