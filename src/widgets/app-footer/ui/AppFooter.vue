@@ -1,43 +1,10 @@
 <script setup lang="ts">
 import logoSakaHoldingIcon from '@/shared/assets/icons/logo-saka-holding.png'
 import phoneCallIcon from '@/shared/assets/icons/phone-call.svg'
-import instagramIcon from '@/shared/assets/icons/instagram.svg'
-import telegramIcon from '@/shared/assets/icons/telegram.svg'
-import vkIcon from '@/shared/assets/icons/vk.svg'
-import whatsappIcon from '@/shared/assets/icons/whatsapp.svg'
 
 import { BaseButton } from '@/shared/ui/base-button'
 
-const footerNavigationSections = [
-  {
-    title: 'Навигация',
-    links: [
-      { label: 'Каталог', href: '/catalog' },
-      { label: 'О компании', href: '/about' },
-      { label: 'Новости', href: '/news' },
-      { label: 'Доставка и оплата', href: '/delivery' },
-      { label: 'Контакты', href: '/contacts' },
-      { label: 'Корзина', href: '/cart' },
-    ],
-  },
-  {
-    title: 'Информация',
-    links: [
-      { label: 'Помощь', href: '/help' },
-      { label: 'Блог', href: '/blog' },
-      { label: 'Вопрос-ответ', href: '/faq' },
-      { label: 'Политика конфиденциальности', href: '/privacy' },
-      { label: 'Карта сайта', href: '/sitemap' },
-    ],
-  },
-]
-
-const socialLinks = [
-  { label: 'VK', href: 'https://vk.com', icon: vkIcon },
-  { label: 'WhatsApp', href: 'https://wa.me', icon: whatsappIcon },
-  { label: 'Telegram', href: 'https://t.me', icon: telegramIcon },
-  { label: 'Instagram', href: 'https://instagram.com', icon: instagramIcon },
-]
+import { footerNavigationSections, socialLinks } from '../model/footer'
 </script>
 
 <template>
@@ -49,11 +16,11 @@ const socialLinks = [
         </RouterLink>
 
         <div class="app-footer__navigation">
-          <nav v-for="section in footerNavigationSections" :key="section.title" class="app-footer__navigation-section" aria-label="Footer navigation">
+          <nav v-for="section in footerNavigationSections" :key="section.title" class="app-footer__navigation-section">
             <h2 class="app-footer__title">{{ section.title }}</h2>
             <ul class="app-footer__list">
               <li v-for="link in section.links" :key="link.label">
-                <a class="app-footer__link" :href="link.href">{{ link.label }}</a>
+                <RouterLink class="app-footer__link" :to="link.to">{{ link.label }}</RouterLink>
               </li>
             </ul>
           </nav>
@@ -79,7 +46,7 @@ const socialLinks = [
           <p class="app-footer__social-title">Напишите нам,<br>мы онлайн:</p>
           <ul class="app-footer__social-list">
             <li v-for="social in socialLinks" :key="social.label">
-              <a class="app-footer__social-link" :href="social.href" target="_blank" rel="noreferrer" :aria-label="social.label">
+              <a class="app-footer__social-link" :href="social.href" target="_blank" rel="noreferrer">
                 <img class="app-footer__social-icon" :src="social.icon" alt="">
               </a>
             </li>
