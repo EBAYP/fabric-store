@@ -1,0 +1,38 @@
+<svg width="280" height="220" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="140" cy="195" rx="80" ry="8" fill="#19242F" opacity="0.08"/>
+
+  <path d="M70 70 L90 35 L100 65 Z" fill="#BFA470"/>
+  <path d="M210 70 L190 35 L180 65 Z" fill="#BFA470"/>
+  <path d="M76 65 L92 40 L97 62 Z" fill="#DBC08D"/>
+  <path d="M204 65 L188 40 L183 62 Z" fill="#DBC08D"/>
+
+  <ellipse cx="140" cy="120" rx="85" ry="75" fill="#BFA470"/>
+  <ellipse cx="140" cy="125" rx="80" ry="68" fill="#DBC08D"/>
+
+  <ellipse cx="108" cy="105" rx="13" ry="15" fill="#19242F"/>
+  <ellipse cx="172" cy="105" rx="13" ry="15" fill="#19242F"/>
+  <circle cx="112" cy="100" r="4" fill="#FFFFFF"/>
+  <circle cx="176" cy="100" r="4" fill="#FFFFFF"/>
+  <circle cx="105" cy="115" r="2" fill="#FFFFFF"/>
+  <circle cx="169" cy="115" r="2" fill="#FFFFFF"/>
+
+  <path d="M137 125 L143 125 L140 130 Z" fill="#19242F"/>
+
+  <path d="M125 135 Q140 145 155 135" stroke="#19242F" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <line x1="95" y1="120" x2="80" y2="118" stroke="#19242F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="95" y1="125" x2="80" y2="127" stroke="#19242F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="95" y1="130" x2="80" y2="132" stroke="#19242F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="185" y1="120" x2="200" y2="118" stroke="#19242F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="185" y1="125" x2="200" y2="127" stroke="#19242F" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="185" y1="130" x2="200" y2="132" stroke="#19242F" stroke-width="1.5" stroke-linecap="round"/>
+
+  <ellipse cx="60" cy="75" rx="6" ry="3" fill="#5BA9D6" opacity="0.7"/>
+  <ellipse cx="220" cy="75" rx="6" ry="3" fill="#5BA9D6" opacity="0.7"/>
+  <ellipse cx="55" cy="90" rx="4" ry="2" fill="#5BA9D6" opacity="0.5"/>
+  <ellipse cx="225" cy="90" rx="4" ry="2" fill="#5BA9D6" opacity="0.5"/>
+
+  <text x="140" y="55" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="18" font-weight="700" fill="#19242F" opacity="0.5">?</text>
+  <text x="220" y="50" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#19242F" opacity="0.4">?</text>
+  <text x="60" y="50" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#19242F" opacity="0.4">?</text>
+</svg>

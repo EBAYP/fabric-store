@@ -28,6 +28,11 @@ const router = createRouter({
       name: 'news',
       component: () => import('@/pages/news').then(({ NewsPage }) => NewsPage),
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('@/pages/not-found').then(({ NotFoundPage }) => NotFoundPage),
+    },
   ],
   scrollBehavior() {
     return { top: 0 }
