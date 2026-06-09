@@ -6,47 +6,28 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 
 import arrowRightIcon from '@/shared/assets/icons/arrow-right.svg'
-import CompanyWomanWithFabricStackImage from '@/shared/assets/images/company-woman-with-fabric-stack.png'
 
 import { BaseButton } from '@/shared/ui/base-button'
 
-const slides = [
-  {
-    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
-    image: CompanyWomanWithFabricStackImage,
-  },
-  {
-    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
-    image: CompanyWomanWithFabricStackImage,
-  },
-  {
-    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
-    image: CompanyWomanWithFabricStackImage,
-  },
-  {
-    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
-    image: CompanyWomanWithFabricStackImage,
-  },
-  {
-    title: 'Здесь будет слайдер\nс различными акциями или <span class="home-hero__title--accent">специальными предложениями</span>',
-    image: CompanyWomanWithFabricStackImage,
-  },
-]
+import type { HeroSlide } from '../model/slides'
+import { heroSlides, splitTitleByAccent } from '../model/slides'
 
-const swiperRef = ref<SwiperInstance>()
+const slides: HeroSlide[] = heroSlides
+
+const swiperRef = ref<SwiperInstance | null>(null)
 const activeSlideIndex = ref(0)
 
 const formatSlideNumber = (index: number) => String(index + 1).padStart(2, '0')
 
-const handleSwiper = (swiper: SwiperInstance) => {
+function handleSwiper(swiper: SwiperInstance) {
   swiperRef.value = swiper
 }
 
-const handleSlideChange = (swiper: SwiperInstance) => {
+function handleSlideChange(swiper: SwiperInstance) {
   activeSlideIndex.value = swiper.realIndex
 }
 
-const goToSlide = (index: number) => {
+function goToSlide(index: number) {
   swiperRef.value?.slideTo(index)
 }
 </script>
@@ -55,11 +36,15 @@ const goToSlide = (index: number) => {
   <section class="home-hero">
     <div class="home-hero__container container">
       <Swiper class="home-hero__slider" :slides-per-view="1" :speed="500" @swiper="handleSwiper" @slide-change="handleSlideChange">
-        <SwiperSlide v-for="(slide, index) in slides" :key="index">
+        <SwiperSlide v-for="slide in slides" :key="slide.id">
           <article class="home-hero__slide">
             <div class="home-hero__content">
-              <!-- eslint-disable-next-line vue/no-v-html -->
-              <h1 class="home-hero__title" v-html="slide.title"/>  <!-- убрать потенциальную инъекцию (хотя тут константный список, и нахер это все надо) -->
+              <h1 class="home-hero__title">
+                <template v-for="(part, partIndex) in splitTitleByAccent(slide.title, slide.accentWords)" :key="partIndex">
+                  <span v-if="part.accent" class="home-hero__title--accent">{{ part.text }}</span>
+                  <span v-else>{{ part.text }}</span>
+                </template>
+              </h1>
 
               <BaseButton class="home-hero__button" variant="gold" shape="pill">
                 <span>Подробнее</span>
@@ -73,14 +58,13 @@ const goToSlide = (index: number) => {
       </Swiper>
 
       <div class="home-hero__controls">
-        <div class="home-hero__pagination" aria-label="Выбор слайда">
+        <div class="home-hero__pagination">
           <button
-            v-for="(_, index) in slides"
-            :key="index"
+            v-for="(slide, index) in slides"
+            :key="slide.id"
             class="home-hero__pagination-button"
             :class="{ 'home-hero__pagination-button--active': index === activeSlideIndex }"
             type="button"
-            :aria-current="index === activeSlideIndex ? 'true' : undefined"
             @click="goToSlide(index)"
           />
         </div>
@@ -156,7 +140,7 @@ $hero-image-right: 60px;
     letter-spacing: $letter-spacing-base;
     white-space: pre-line;
 
-    :deep(.home-hero__title--accent) {
+    &--accent {
       color: $color-gold;
     }
   }
