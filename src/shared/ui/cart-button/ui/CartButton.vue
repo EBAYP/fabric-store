@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <button class="cart-button" type="button">
-    <img class="cart-button__icon" :src="shoppingCartIcon" alt="">
+    <img class="cart-button__icon" :src="shoppingCartIcon">
     <span v-if="count > 0" class="cart-button__count">
       <span class="cart-button__count-text">{{ count }}</span>
     </span>

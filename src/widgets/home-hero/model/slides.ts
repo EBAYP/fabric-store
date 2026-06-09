@@ -1,4 +1,4 @@
-import CompanyWomanWithFabricStackImage from '@/shared/assets/images/company-woman-with-fabric-stack.png'
+import WomanWithFabricStackImage from '@/shared/assets/images/woman-with-fabric-stack.png'
 
 export interface HeroSlide {
   id: number
@@ -32,30 +32,30 @@ export const heroSlides: HeroSlide[] = [
     id: 1,
     title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
     accentWords: ['специальными предложениями'],
-    image: CompanyWomanWithFabricStackImage,
+    image: WomanWithFabricStackImage,
   },
   {
     id: 2,
     title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
     accentWords: ['специальными предложениями'],
-    image: CompanyWomanWithFabricStackImage,
+    image: WomanWithFabricStackImage,
   },
   {
     id: 3,
     title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
     accentWords: ['специальными предложениями'],
-    image: CompanyWomanWithFabricStackImage,
+    image: WomanWithFabricStackImage,
   },
   {
     id: 4,
     title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
     accentWords: ['специальными предложениями'],
-    image: CompanyWomanWithFabricStackImage,
+    image: WomanWithFabricStackImage,
   },
   {
     id: 5,
     title: 'Здесь будет слайдер\nс различными акциями или специальными предложениями',
     accentWords: ['специальными предложениями'],
-    image: CompanyWomanWithFabricStackImage,
+    image: WomanWithFabricStackImage,
   },
 ]

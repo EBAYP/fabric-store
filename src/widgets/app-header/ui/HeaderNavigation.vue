@@ -13,7 +13,7 @@ import { primaryNavigationLinks } from '@/shared/config'
           :to="link.to"
         >
           <span>{{ link.label }}</span>
-          <img class="header-navigation__catalog-icon" :src="catalogChevronIcon" alt="">
+          <img class="header-navigation__catalog-icon" :src="catalogChevronIcon">
         </RouterLink>
         <RouterLink
           v-else

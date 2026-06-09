@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import cat404Image from '@/shared/assets/icons/cat-404.svg'
+import cat404Image from '@/shared/assets/icons/404-cat.svg'
 import { BaseButton } from '@/shared/ui/base-button'
 </script>
 
 <template>
   <section class="not-found-page">
     <div class="not-found-page__container container">
-      <img class="not-found-page__image" :src="cat404Image" alt="">
+      <img class="not-found-page__image" :src="cat404Image">
       <h1 class="not-found-page__title">404</h1>
       <p class="not-found-page__text">Страница не найдена</p>
       <RouterLink to="/">

@@ -48,11 +48,11 @@ function goToSlide(index: number) {
 
               <BaseButton class="home-hero__button" variant="gold" shape="pill">
                 <span>Подробнее</span>
-                <img class="home-hero__button-icon" :src="arrowRightIcon" alt="">
+                <img class="home-hero__button-icon" :src="arrowRightIcon">
               </BaseButton>
             </div>
 
-            <img class="home-hero__image" :src="slide.image" alt="">
+            <img class="home-hero__image" :src="slide.image">
           </article>
         </SwiperSlide>
       </Swiper>
@@ -94,8 +94,8 @@ $hero-image-top: -68px;
 $hero-image-right: 60px;
 
 .home-hero {
-  padding-top: rem(40);
-  padding-bottom: rem(80);
+  padding-top: rem(96);
+  padding-bottom: rem(40);
   overflow-x: clip;
   background: $color-white;
 

@@ -9,7 +9,7 @@ import { promoCategories } from '../model/promo-categories'
 
       <ul class="header-promo-bar__list">
         <li v-for="item in promoCategories" :key="item.label" class="header-promo-bar__item">
-          <img class="header-promo-bar__icon" :src="item.icon" alt="">
+          <img class="header-promo-bar__icon" :src="item.icon">
           <span class="header-promo-bar__label">{{ item.label }}</span>
         </li>
       </ul>

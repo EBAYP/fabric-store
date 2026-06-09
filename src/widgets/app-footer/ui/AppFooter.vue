@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import logoSakaHoldingIcon from '@/shared/assets/icons/logo-saka-holding.png'
+import logoSakaHoldingImage from '@/shared/assets/images/logo-saka-holding.png'
 import phoneCallIcon from '@/shared/assets/icons/phone-call.svg'
 
 import { BaseButton } from '@/shared/ui/base-button'
@@ -12,7 +12,7 @@ import { footerNavigationSections, socialLinks } from '../model/footer'
     <div class="app-footer__container container">
       <div class="app-footer__top">
         <RouterLink class="app-footer__logo-link" to="/">
-          <img class="app-footer__logo" :src="logoSakaHoldingIcon" alt="Saka Holding">
+          <img class="app-footer__logo" :src="logoSakaHoldingImage">
         </RouterLink>
 
         <div class="app-footer__navigation">
@@ -35,7 +35,7 @@ import { footerNavigationSections, socialLinks } from '../model/footer'
           </form>
 
           <a class="app-footer__phone" href="tel:+902125470826">
-            <img class="app-footer__phone-icon" :src="phoneCallIcon" alt="">
+            <img class="app-footer__phone-icon" :src="phoneCallIcon">
             <span>+90 212 547 08 26</span>
           </a>
         </section>
@@ -47,7 +47,7 @@ import { footerNavigationSections, socialLinks } from '../model/footer'
           <ul class="app-footer__social-list">
             <li v-for="social in socialLinks" :key="social.label">
               <a class="app-footer__social-link" :href="social.href" target="_blank" rel="noreferrer">
-                <img class="app-footer__social-icon" :src="social.icon" alt="">
+                <img class="app-footer__social-icon" :src="social.icon">
               </a>
             </li>
           </ul>
@@ -72,7 +72,7 @@ $footer-navigation-second-column-width: 260px;
 $footer-subscription-width: 460px;
 $footer-form-width: 440px;
 $footer-form-height: 55px;
-$footer-submit-width: 180px;
+$footer-form-submit-width: 180px;
 
 .app-footer {
   color: $color-white;
@@ -128,7 +128,7 @@ $footer-submit-width: 180px;
     margin: 0;
     font-size: rem($font-size-medium);
     font-weight: $font-weight-semibold;
-    line-height: 1.514;
+    line-height: $line-height-base;
     letter-spacing: $letter-spacing-base;
   }
 
@@ -191,7 +191,7 @@ $footer-submit-width: 180px;
     position: absolute;
     top: 0;
     right: 0;
-    width: rem($footer-submit-width);
+    width: rem($footer-form-submit-width);
     height: rem($footer-form-height);
     min-height: rem($footer-form-height);
     padding: 0;
@@ -270,7 +270,7 @@ $footer-submit-width: 180px;
     margin-top: rem(11);
     font-size: rem($font-size-base);
     font-weight: $font-weight-regular;
-    line-height: 1.514;
+    line-height: $line-height-base;
     color: $color-text-light-muted;
     text-align: right;
     letter-spacing: $letter-spacing-base;

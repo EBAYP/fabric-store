@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import logoErosIcon from '@/shared/assets/icons/logo-eros.png'
-import logoSakaHoldingIcon from '@/shared/assets/icons/logo-saka-holding.png'
-import logoSakaIcon from '@/shared/assets/icons/logo-saka.png'
-import logoTorTexIcon from '@/shared/assets/icons/logo-tt.png'
+import logoErosImage from '@/shared/assets/images/logo-eros.png'
+import logoSakaHoldingImage from '@/shared/assets/images/logo-saka-holding.png'
+import logoSakaImage from '@/shared/assets/images/logo-saka.png'
+import logoTorTexImage from '@/shared/assets/images/logo-tortex.png'
 import phoneCallIcon from '@/shared/assets/icons/phone-call.svg'
 import userIcon from '@/shared/assets/icons/user.svg'
 
@@ -14,13 +14,13 @@ import { CartButton } from '@/shared/ui/cart-button'
   <div class="header-top">
     <div class="header-top__container container">
       <RouterLink to="/">
-        <img class="header-top__main-logo" :src="logoSakaHoldingIcon" alt="Saka Holding">
+        <img class="header-top__main-logo" :src="logoSakaHoldingImage">
       </RouterLink>
 
       <div class="header-top__partner-logos">
-        <img class="header-top__partner-logo" :src="logoSakaIcon" alt="Saka">
-        <img class="header-top__partner-logo" :src="logoErosIcon" alt="Eros">
-        <img class="header-top__partner-logo" :src="logoTorTexIcon" alt="TorTex">
+        <img class="header-top__partner-logo" :src="logoSakaImage">
+        <img class="header-top__partner-logo" :src="logoErosImage">
+        <img class="header-top__partner-logo" :src="logoTorTexImage">
       </div>
 
       <p class="header-top__descriptor">Производитель турецкого трикотажного полотна</p>
@@ -29,14 +29,14 @@ import { CartButton } from '@/shared/ui/cart-button'
         <CartButton :count="3" />
 
         <RouterLink class="header-top__login-link" to="/account">
-          <img class="header-top__login-icon" :src="userIcon" alt="">
+          <img class="header-top__login-icon" :src="userIcon">
           <span>Войти</span>
         </RouterLink>
 
         <div class="header-top__contact">
           <div class="header-top__contact-content">
             <a class="header-top__phone" href="tel:+902125470826">
-              <img class="header-top__phone-icon" :src="phoneCallIcon" alt="">
+              <img class="header-top__phone-icon" :src="phoneCallIcon">
               <span>+90 212 547 08 26</span>
             </a>
             <button class="header-top__callback-button" type="button">Заказать звонок</button>
