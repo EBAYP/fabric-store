@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <button class="cart-button" type="button" aria-label="Корзина">
+  <button class="cart-button" type="button">
     <img class="cart-button__icon" :src="shoppingCartIcon" alt="">
     <span v-if="count > 0" class="cart-button__count">
       <span class="cart-button__count-text">{{ count }}</span>

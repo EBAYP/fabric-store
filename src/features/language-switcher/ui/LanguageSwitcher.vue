@@ -11,7 +11,7 @@ function selectLanguage(language: Language) {
 </script>
 
 <template>
-  <div class="language-switcher" aria-label="Language selection">
+  <div class="language-switcher">
     <button
       class="language-switcher__button"
       :class="{ 'language-switcher__button--active': selectedLanguage === 'ru' }"

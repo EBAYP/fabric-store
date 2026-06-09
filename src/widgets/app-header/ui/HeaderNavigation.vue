@@ -1,19 +1,28 @@
 <script setup lang="ts">
 import catalogChevronIcon from '@/shared/assets/icons/catalog-chevron.svg'
+import { primaryNavigationLinks } from '@/shared/config'
 </script>
 
 <template>
-  <nav class="header-navigation" aria-label="Основная навигация">
+  <nav class="header-navigation">
     <div class="header-navigation__container container">
-      <RouterLink class="header-navigation__link" to="/">Главная</RouterLink>
-      <RouterLink class="header-navigation__link header-navigation__link--catalog" to="/catalog">
-        <span>Каталог</span>
-        <img class="header-navigation__catalog-icon" :src="catalogChevronIcon">
-      </RouterLink>
-      <RouterLink class="header-navigation__link" to="/about">О компании</RouterLink>
-      <RouterLink class="header-navigation__link" to="/news">Новости</RouterLink>
-      <RouterLink class="header-navigation__link" to="/delivery">Доставка и оплата</RouterLink>
-      <RouterLink class="header-navigation__link" to="/contacts">Контакты</RouterLink>
+      <template v-for="link in primaryNavigationLinks" :key="link.to">
+        <RouterLink
+          v-if="link.label === 'Каталог'"
+          class="header-navigation__link header-navigation__link--catalog"
+          :to="link.to"
+        >
+          <span>{{ link.label }}</span>
+          <img class="header-navigation__catalog-icon" :src="catalogChevronIcon" alt="">
+        </RouterLink>
+        <RouterLink
+          v-else
+          class="header-navigation__link"
+          :to="link.to"
+        >
+          {{ link.label }}
+        </RouterLink>
+      </template>
     </div>
   </nav>
 </template>
